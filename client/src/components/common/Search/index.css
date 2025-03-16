@@ -1,0 +1,44 @@
+@import '../../../index.css';
+
+.search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 625px;
+  min-width: 265px;
+  width: 80%;
+  height: 32px;
+  border-radius: 10px;
+  background-color: #F6F6FB;
+  margin-left: 100px;
+}
+
+.search-input {
+  font-family: 'Rubik Light', sans-serif;
+  color: var(--black-300);
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 50%;
+  margin-left: 10px;
+}
+
+.search-button {
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+  margin-right: 10px;
+  color: var(--black-100)
+}
+
+.search-input:focus {
+  border: none;
+}
+
+.search-button .size {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

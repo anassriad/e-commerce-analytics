@@ -32,3 +32,5 @@ client/*.local
 *.sln
 *.sw?
 
+
+*storybook.log

@@ -1,0 +1,70 @@
+.sidebar {
+  width: 15.7%;
+  background-color: #F1F2F7;
+  color: black;
+  max-height: 100vh; /* Full height */
+  min-width: 15.7;
+}
+
+.sidebar .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+  max-width: 100%;
+  border-bottom: 0.5px solid var(--black-100);
+  padding: 0.1rem 1rem;
+  color: var(--primary-300);
+  font-family: 'Rubik Bold';
+}
+
+nav.groups {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+}
+
+nav.groups .group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+
+
+nav.groups .group p {
+  font-family: 'Rubik', sans-serif;
+  color: var(--black-100);
+  font-size: 0.9rem;
+}
+
+nav.groups .group ul{
+  list-style: none;
+  padding: 0;
+  color: var(--black-200);
+  font-size: 0.9rem;
+  font-family: 'Rubik', sans-serif;
+  margin-top: 10px;
+  width: 100%;
+}
+
+nav.groups .group ul .item {
+  padding: 0.7rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  border-radius: 7px;
+  transition: all 0.5s ease;
+}
+
+nav.groups .group ul .item:hover {
+  background-color: var(--primary-200);
+  color: var(--primary-300)
+}

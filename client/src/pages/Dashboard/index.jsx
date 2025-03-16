@@ -2,10 +2,12 @@ import "./index.css"
 
 import React from 'react'
 
-function index() {
+function Index({size}) {
   return (
-    <div>index</div>
+    <div className="main">
+      <p>Window size: {size.width}, {size.height} </p>
+    </div>
   )
 }
 
-export default index
+export default Index
