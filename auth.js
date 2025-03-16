@@ -7,7 +7,6 @@ const router = express.Router();
 
 // MySQL Database Connection
 const connection = mysql.createConnection({
-
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
@@ -34,6 +33,35 @@ router.post('/login', (req, res) => {
     const token = jwt.sign({ id: user.id, role: user.role }, process.env.JWT_SECRET, { expiresIn: '1h' });
 
     res.json({ token, role: user.role });
+  });
+});
+
+// Sign-Up Route
+router.post('/signup', async (req, res) => {
+  const { username, password, role } = req.body;
+
+  // Check if all required fields are provided
+  if (!username || !password || !role) {
+    return res.status(400).json({ error: 'Please provide all required fields' });
+  }
+
+  // Check if the username already exists
+  connection.query('SELECT * FROM users WHERE username = ?', [username], async (err, results) => {
+    if (err) return res.status(500).json({ error: 'Database error' });
+    if (results.length > 0) return res.status(400).json({ error: 'Username already taken' });
+
+    // Hash the password before saving it
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    // Insert the new user into the database
+    connection.query('INSERT INTO users (username, password, role) VALUES (?, ?, ?)', [username, hashedPassword, role], (err, results) => {
+      if (err) return res.status(500).json({ error: 'Failed to register user' });
+
+      // Optionally, generate JWT Token for the new user
+      const token = jwt.sign({ id: results.insertId, role }, process.env.JWT_SECRET, { expiresIn: '1h' });
+
+      res.status(201).json({ message: 'User registered successfully', token, role });
+    });
   });
 });
 
