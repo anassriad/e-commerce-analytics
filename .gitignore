@@ -1,2 +1,36 @@
+## server 
 .env
-node_modules/
+server/node_modules/
+server/package-lock.json
+
+
+## client
+
+# Logs
+client/logs
+client/*.log
+client/npm-debug.log*
+client/yarn-debug.log*
+client/yarn-error.log*
+client/pnpm-debug.log*
+client/lerna-debug.log*
+
+client/node_modules
+client/package-lock.json
+client/dist
+client/dist-ssr
+client/*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+
+*storybook.log

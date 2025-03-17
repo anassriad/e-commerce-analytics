@@ -1,0 +1,99 @@
+@font-face {
+  font-family: 'Rubik Bold';
+  src: url('./assets/fonts/Rubik-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Rubik Extra Bold';
+  src: url('./assets/fonts/Rubik-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Rubik Light';
+  src: url('./assets/fonts/Rubik-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Rubik Medium';
+  src: url('./assets/fonts/Rubik-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('./assets/fonts/Rubik-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Rubik Semi Bold';
+  src: url('./assets/fonts/Rubik-SemiBold.ttf') format('truetype');
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  font-family: 'Rubik Regular', sans-serif;
+  line-height: 1.5;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #fff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --primary-100: #0061FF0A;
+  --primary-200: #0061FF1A;
+  --primary-300: #0061FF;
+  --accent: #FBFBFB;
+  --black-100: #8C8E98;
+  --black-200: #666876;
+  --black-300: #191D31;
+  --danger: #F75555;
+  --scrollbar-width: 0px;
+  --scrollbar-color: transparent transparent;
+}
+
+::-webkit-scrollbar {
+  display: none; /* Hides scrollbar */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  overflow-y: scroll; /* Enables scrolling */
+  -ms-overflow-style: none;  /* Hides scrollbar in Internet Explorer and Edge */
+  scrollbar-width: none;  /* Hides scrollbar in Firefox */
+}
+
+.app {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.content {
+  max-width: 77.4%;
+  margin-left: 20%;
+}
+
+.header {
+  flex: 1;
+}
+
+.main {
+  flex: 1;
+  padding: 1rem;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+}
