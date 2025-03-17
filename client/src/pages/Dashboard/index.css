@@ -1,6 +1,254 @@
-.main {
-  padding: 1rem;
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  width: 98%;
+  padding: auto 40px;
+  margin-top: 60px;
+}
+
+.dashboard-title {
+  font-size: 22px;
+  font-family: 'Rubik';
+  margin-bottom: 24px;
+  color: var(--black-200);
+}
+
+.charts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.charts .group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 3px;
+}
+
+.card {
   background-color: #fff;
-  max-width: 100%;
-  color: black;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  /* border: red solid 1px; */
+  height: auto;
+}
+
+.s2 {
+  width: 50%;
+}
+
+.revenue {
+  width: 65%;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.card-title {
+  font-size: 14px;
+  font-family: 'Rubik', sans-serif;
+  color: var(--black-200);
+}
+
+.card-value {
+  font-size: 28px;
+  font-family: 'Rubik Bold', sans-serif;
+  color: var(--black-300);
+}
+
+.card-content {
+  padding: 16px 20px 20px;
+}
+
+
+.view-report-btn {
+  background-color: #e6eeff;
+  color: #8f9bff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.view-report-btn:hover {
+  background-color: #d9e3ff;
+}
+
+.trend {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.trend-up {
+  color: #38a169;
+}
+
+.trend-down {
+  color: var(--danger);
+}
+
+.trend-icon {
+  margin-right: 4px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #718096;
+  margin-top: 4px;
+}
+
+.chart-container {
+  width: 100%;
+  height: 250px;
+}
+
+.order-chart-container {
+  width: 100%;
+  height: 200px;
+}
+
+.food-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.food-item:last-child {
+  margin-bottom: 0;
+}
+
+.food-info {
+  display: flex;
+  align-items: center;
+}
+
+.food-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #e2e8f0;
+  margin-right: 12px;
+}
+
+.food-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.food-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.food-price {
+  font-size: 14px;
+  color: #718096;
+}
+
+.legend {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  margin-bottom: 8px;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.legend-label {
+  font-size: 14px;
+  color: #718096;
+}
+
+.tooltip {
+  background-color: #2d3748;
+  color: white;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-size: 14px;
+}
+
+.tooltip-title {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.tooltip-value {
+  font-size: 13px;
+}
+
+.donut-tooltip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #2d3748;
+  color: white;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.donut-tooltip-title {
+  font-weight: 500;
+}
+
+.donut-tooltip-subtitle {
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+.donut-tooltip-value {
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .dashboard {
+    padding: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .full-width {
+    grid-column: span 2;
+  }
 }

@@ -5,11 +5,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: transparent;
-  max-height: 60px;
+  background-color: #fff;
+  min-height: 60px;
   padding: 0.1rem 1rem;
   border-bottom: 1px solid var(--black-100);
-  width: 100%;
+  width: 77.4%;
+  position: fixed;
+  z-index: 30;
 }
 
 /* Header icons */

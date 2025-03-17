@@ -12,6 +12,11 @@
   border-radius: 10px;
   background-color: #F6F6FB;
   margin-left: 100px;
+  transition: border 0.3s ease-in-out;
+}
+
+.search:focus-within {
+  border: 2px solid var(--primary-300);
 }
 
 .search-input {

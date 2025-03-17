@@ -2,8 +2,9 @@
   width: 15.7%;
   background-color: #F1F2F7;
   color: black;
-  max-height: 100vh; /* Full height */
-  min-width: 15.7;
+  height: 100%; /* Full height */
+  min-width: 20%;
+  position: fixed;
 }
 
 .sidebar .logo {
@@ -31,8 +32,8 @@ nav.groups {
 nav.groups .group {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 90%;
+  align-items: start;
+  width: 80%;
 }
 
 
@@ -44,6 +45,9 @@ nav.groups .group p {
 
 nav.groups .group ul{
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
   padding: 0;
   color: var(--black-200);
   font-size: 0.9rem;
@@ -58,10 +62,14 @@ nav.groups .group ul .item {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 2px;
+  gap: 10px;
   border-radius: 7px;
   transition: all 0.5s ease;
+  width: 90%;
+}
+
+nav.groups .group ul .item .mdi {
+  font-size: 1.1rem;
 }
 
 nav.groups .group ul .item:hover {
