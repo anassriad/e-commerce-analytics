@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from '@/components/layouts/Header';
-import Dashboard from '@/pages/Dashboard'
+import Header from './components/layouts/Header';
+import Dashboard from './pages/Dashboard'
 // import { useWindowSize } from '@/hooks/useWindowResize';
-import Sidebar from '@/components/layouts/Sidebar';
+import Sidebar from './components/layouts/Sidebar';
 
 function App() {
 

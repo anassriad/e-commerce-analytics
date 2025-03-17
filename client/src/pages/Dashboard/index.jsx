@@ -1,5 +1,5 @@
-import { RevenueChart } from "@/components/ui/Dashboard/RevenueChart"
-import { OrderTimeChart } from "@/components/ui/Dashboard/OrderTimeChart"
+import { RevenueChart } from "../../components/ui/Dashboard/RevenueChart"
+import { OrderTimeChart } from "../..//components/ui/Dashboard/OrderTimeChart"
 import { RatingChart } from "@/components/ui/Dashboard/RatingChart"
 import { OrderChart } from "@/components/ui/Dashboard/OrderChart"
 import { MostOrderedFood } from "@/components/ui/Dashboard/MostOrderedFood"
